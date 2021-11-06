@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    min-height: 100%;
+}
+
+.homeBackground {
+    height: 100vh;
+    width: 100vw;
+    background: url('../public/img/background-home-desktop.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.navContainer {
+    height: 96px;
+    width: calc(100% - 55px);
+    
+    margin-left: auto;
+    margin-top: 40px;
+    
+}
+
+.navBackground {
+    height: 96px;
+    width: 60%;
+    margin-left: auto;
+    background: rgb(255, 255, 255, 0.04);
+    backdrop-filter: blur(1.5rem);
+    
+    
+}
+
+.navItemsContainer {
+    margin-top: 40px;
+    width: 70%;
+}
+
+.navText {
+    color: white;
+    font-family: 'Barlow', 'Condensed';
+    line-height: 19px;
+    letter-spacing: 2.7px;
+}
+
+.navLine {
+    width: 473px;
+    height: 1px;
+    background: #FFFFFF;
+    margin-top: 50px;
+    margin-left: 15%;
+    opacity: 0.25;
+    z-index: 10;
+}
+
+.logo {
+    margin-top: 26px;
+    width: 70px;
+}
+
+.navHome:hover {
+   
+}
+
+.navHome {
+    height: 100%;
+}
+
+.homeFocusBar {
+     height: 3px;
+    width: 70px;
+    position: relative;
+    border: 2px solid white;
+}
+
+.homeTextContainer {
+    position: absolute;
+    height: 382px;
+    width: 450px;
+    left: 165px;
+    top: 387px;
+}
+
+.homeText1 {
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 32px;
+    color: #D0D6F9;
+    letter-spacing: 1.5px;
+}
+
+.homeText2 {
+    font-family: 'Bellefair';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 150px;
+    line-height: 172px;
+    /* identical to box height */
+    margin-top: 30px;
+
+    color: #FFFFFF;
+}
+
+.homeText3 {
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 32px;
+    /* or 178% */
+    color: #D0D6F9;
+    margin-top: auto;
+}
+
+.exploreCircle {
+    position: absolute;
+    height: 274px;
+    width: 274px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    bottom: 220px;
+    right: 220px;
+}
+
+.exploreText {
+    position: absolute;
+    height: 37px;
+    left: 22.63%;
+    right: 23.36%;
+    top: calc(50% - 37px/2 + 0.5px);
+
+    font-family: Bellefair;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 37px;
+    /* identical to box height */
+
+    letter-spacing: 2px;
+
+    color: #0B0D17;
+}
