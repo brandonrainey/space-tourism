@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 
 export default function Navbar() {
@@ -11,20 +12,35 @@ export default function Navbar() {
             
             <div className='navBackground flex justify-center'>
                 <div className='navItemsContainer flex justify-around'>
-                    <div className='navText navHome'>
-                        <b>00</b> HOME
-                        <div className='homeFocusbar'></div>
+                    <div className='flex flex-col'>
+                         <Link href='/'><a className='navText navHome'>
+                            <b>00</b> HOME
+                         </a></Link>
+                         <div className='homeFocusbar'></div>
                     </div>
-                        
-                    <div className='navText navDestination'>
-                        <b>01</b> DESTINATION
+                   
+
+                    <div className='flex flex-col'>
+                         <Link href='/Destination'><a className='navText navDestination'>
+                            <b>01</b> DESTINATION
+                        </a></Link>
+                        <div className='destinationFocusbar'></div>
                     </div>
-                    <div className='navText navCrew'>
-                        <b>02</b> CREW
+                    
+                    <div className='flex flex-col'>
+                        <div className='navText navCrew'>
+                            <b>02</b> CREW
+                        </div>
+                        <div className='crewFocusbar'></div>
                     </div>
-                    <div className='navText navTechnology'>
-                        <b>03</b> TECHNOLOGY
+                    
+                    <div className='flex flex-col'>
+                        <div className='navText navTechnology'>
+                            <b>03</b> TECHNOLOGY
+                        </div>
+                        <div className='techFocusbar'></div>
                     </div>
+                    
                 </div>
 
                 
