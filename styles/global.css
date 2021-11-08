@@ -221,3 +221,41 @@ body {
 
     color: #0B0D17;
 }
+
+.planetImg {
+    margin-top: 8rem;
+    margin-left: 28rem;
+}
+
+.destinationTitle {
+    margin-top: 7rem;
+    margin-left: 20rem;
+
+    font-family: 'Barlow' 'Condensed';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 34px;
+    /* identical to box height */
+
+    letter-spacing: 4.725px;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+.destinationTitleNum {
+    font-family: 'Barlow' 'Condensed';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 34px;
+    /* identical to box height */
+
+    letter-spacing: 4.725px;
+
+    color: #FFFFFF;
+
+    mix-blend-mode: normal;
+    opacity: 0.25;
+}
