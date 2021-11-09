@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import Navbar from "../components/Navbar"
 
 
@@ -6,9 +6,14 @@ import Navbar from "../components/Navbar"
 export default function Home() {
   const destinations = []
 
+  const [navItem, setNavItem] = useState('')
+
   return (
     <div className='homeBackground flex'>
-      <Navbar />
+      <Navbar 
+        navItem={navItem}
+        setNavItem={setNavItem}
+      />
       <div className='homeTextContainer flex flex-col'>
         <p className='homeText1'>
           SO, YOU WANT TO TRAVEL TO

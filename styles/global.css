@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&display=swap');
 
 html {
     height: 100%;
     width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 body {
@@ -24,6 +27,16 @@ body {
     height: 100vh;
     width: 100vw;
     background: url('../public/img/background-destination-desktop.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.crewBackground {
+    height: 100vh;
+    width: 100vw;
+    background: url('../public/assets/crew/background-crew-desktop.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -56,7 +69,7 @@ body {
 
 .navText {
     color: white;
-    font-family: 'Barlow', 'Condensed';
+    font-family: 'Barlow Condensed';
     line-height: 19px;
     letter-spacing: 2.7px;
 }
@@ -110,19 +123,55 @@ body {
 }
 
 .navTechnology:hover ~ .techFocusbar{
+    opacity: 0.5;
+}
+
+.techFocusbarSelected {
     opacity: 1;
+    height: 3px;
+    width: 150px;
+    position: relative;
+    background: white;
+    z-index: 10;
 }
 
 .navDestination:hover ~ .destinationFocusbar{
+    opacity: 0.5;
+}
+
+.destinationFocusbarSelected {
     opacity: 1;
+    height: 3px;
+    width: 140px;
+    position: relative;
+    background: white;
+    z-index: 10;
 }
 
 .navCrew:hover ~ .crewFocusbar{
+    opacity: 0.5;
+}
+
+.crewFocusbarSelected {
     opacity: 1;
+    height: 3px;
+    width: 80px;
+    position: relative;
+    background: white;
+    z-index: 10;
 }
 
 .navHome:hover ~ .homeFocusbar{
+    opacity: 0.5;
+}
+
+.homeFocusbarSelected {
     opacity: 1;
+     height: 3px;
+    width: 80px;
+    position: relative;
+    background: white;
+    z-index: 10;
 }
 
 .destinationFocusbar {
@@ -210,7 +259,7 @@ body {
     right: 23.36%;
     top: calc(50% - 37px/2 + 0.5px);
 
-    font-family: Bellefair;
+    font-family: 'Bellefair';
     font-style: normal;
     font-weight: normal;
     font-size: 32px;
@@ -231,7 +280,7 @@ body {
     margin-top: 7rem;
     margin-left: 20rem;
 
-    font-family: 'Barlow' 'Condensed';
+    font-family: 'Barlow Condensed';
     font-style: normal;
     font-weight: normal;
     font-size: 28px;
@@ -245,7 +294,7 @@ body {
 }
 
 .destinationTitleNum {
-    font-family: 'Barlow' 'Condensed';
+    font-family: 'Barlow Condensed';
     font-style: normal;
     font-weight: bold;
     font-size: 28px;
@@ -259,3 +308,309 @@ body {
     mix-blend-mode: normal;
     opacity: 0.25;
 }
+
+.planetNavText {
+    font-family: 'Barlow Condensed';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 2.7px;
+
+    color: #FFFFFF;
+}
+
+.destinationContainer {
+    width: 445px;
+    height: 472px;
+    margin-left: 18rem;
+    margin-top: 6rem;
+}
+
+.moonFocusbar {
+    opacity: 0;
+    height: 3px;
+    width: 38px;
+    background: white;
+    position: relative;
+    
+}
+
+.marsFocusbar {
+    opacity: 0;
+    height: 3px;
+    width: 36px;
+    background: white;
+    position: relative;
+}
+
+.titanFocusbar {
+    opacity: 0;
+    height: 3px;
+    width: 40px;
+    background: white;
+    position: relative;
+}
+
+.europaFocusbar {
+    opacity: 0;
+    height: 3px;
+    width: 54px;
+    background: white;
+    position: relative;
+}
+
+
+.navMars {
+    height: 100%;
+}
+
+.navEuropa {
+    height: 100%;
+}
+
+.navTitan {
+    height: 100%;
+}
+
+.navMoon {
+    height: 100%;
+    position: relative;
+}
+
+.navMoon:hover ~ .moonFocusbar {
+    opacity: 0.5;
+}
+
+.moonFocusbarSelected {
+    opacity: 1;
+    height: 3px;
+    width: 38px;
+    background: white;
+    position: relative;
+}
+
+.marsFocusbarSelected {
+    opacity: 1;
+    height: 3px;
+    width: 36px;
+    background: white;
+    position: relative;
+}
+
+.europaFocusbarSelected {
+    opacity: 1;
+    height: 3px;
+    width: 54px;
+    background: white;
+    position: relative;
+}
+
+.titanFocusbarSelected {
+    opacity: 1;
+    height: 3px;
+    width: 40px;
+    background: white;
+    position: relative;
+}
+
+.navMars:hover ~ .marsFocusbar {
+    opacity: 0.5;
+}
+
+.navEuropa:hover ~ .europaFocusbar {
+    opacity: 0.5;
+}
+
+.navTitan:hover ~ .titanFocusbar {
+    opacity: 0.5;
+}
+
+.planetName {
+    margin-top: 2.5rem;
+    font-family: 'Bellefair';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 115px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+}
+
+.planetDescription {
+    margin-top: 1rem;
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 32px;
+    /* or 178% */
+
+
+    color: #D0D6F9;
+}
+
+.avgDistance {
+    font-family: 'Barlow Condensed';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+    letter-spacing: 2.3625px;
+    text-transform: uppercase;
+
+    color: #D0D6F9;
+}
+
+.distanceValue {
+    margin-top: 1rem;
+    font-family: 'Bellefair';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 32px;
+    /* identical to box height */
+
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+.footerInfo {
+    margin-top: 2rem;
+}
+
+.destinationLine {
+    margin-top: 3rem;
+    width: 444px;
+    height: 1px;
+    background: #383B4B;
+}
+
+.planetDistance {
+    margin-right: 5rem;
+}
+
+.crewTitle {
+    margin-top: 7rem;
+    margin-left: 20rem;
+
+    font-family: 'Barlow Condensed';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 34px;
+    /* identical to box height */
+
+    letter-spacing: 4.725px;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+.crewTitleNum {
+    font-family: 'Barlow Condensed';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 34px;
+    /* identical to box height */
+
+    letter-spacing: 4.725px;
+
+    color: #FFFFFF;
+
+    mix-blend-mode: normal;
+    opacity: 0.25;
+}
+
+.crewRole {
+    font-family: 'Bellefair';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 37px;
+    /* identical to box height */
+
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+
+    mix-blend-mode: normal;
+    opacity: 0.5;
+}
+
+.crewName {
+    width: 700px;
+    font-family: 'Bellefair';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 56px;
+    line-height: 64px;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+    margin-top: 1rem;
+}
+
+.crewBio {
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 32px;
+    /* or 178% */
+
+
+    color: #D0D6F9;
+
+    margin-top: 2rem;
+}
+
+.crewContainer {
+    width: 444px;
+    max-height: 580px;
+    margin-left: 19.9rem;
+    margin-top: 10rem;
+}
+
+.dotActive {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #FFFFFF;
+}
+
+.dotInactive{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.17;
+}
+
+.dotNav {
+    position: absolute;
+    width: 132px;
+    bottom: 10rem;
+    left: 20rem;
+}
+
+.crewImageContainer {
+    margin-left: 23.5rem;
+    margin-top: 1.6rem;
+}
+
+.crewImage {
+    position:absolute;
+    top:100vh;
+    transform:translateY(-100%);
+}
+
+
+

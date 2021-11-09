@@ -1,8 +1,21 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 
 
-export default function Navbar() {
+export default function Navbar({ navItem, setNavItem }) {
+
+    useEffect(() => {
+        console.log(navItem)
+        switch (window.location.pathname) {
+            case '/':
+                () => setNavItem('home')
+                break;
+            case '/Destination':
+                () => setNavItem('destination')
+                break;
+        }
+    })
+    
     return (
         <div className='navContainer flex'>
             <svg className='logo' xmlns="http://www.w3.org/2000/svg" width="54" height="54"><g fill="none" fill-rule="evenodd"><circle cx="24" cy="24" r="24" fill="#FFF"/><path fill="#0B0D17" d="M24 0c0 16-8 24-24 24 15.718.114 23.718 8.114 24 24 0-16 8-24 24-24-16 0-24-8-24-24z"/></g></svg>
@@ -13,32 +26,32 @@ export default function Navbar() {
             <div className='navBackground flex justify-center'>
                 <div className='navItemsContainer flex justify-around'>
                     <div className='flex flex-col'>
-                         <Link href='/'><a className='navText navHome'>
+                         <Link href='/' onClick={() => setNavItem('home')}><a className='navText navHome' >
                             <b>00</b> HOME
                          </a></Link>
-                         <div className='homeFocusbar'></div>
+                         <div className={`${navItem === 'home' ? 'homeFocusbarSelected' : 'homeFocusbar'}`}></div>
                     </div>
                    
 
                     <div className='flex flex-col'>
-                         <Link href='/Destination'><a className='navText navDestination'>
+                         <Link href='Destination' onClick={() => setNavItem('destination')}><a className='navText navDestination' >
                             <b>01</b> DESTINATION
                         </a></Link>
-                        <div className='destinationFocusbar'></div>
+                        <div className={`${navItem === 'destination' ? 'destinationFocusbarSelected' : 'destinationFocusbar'}`}></div>
                     </div>
                     
                     <div className='flex flex-col'>
-                        <div className='navText navCrew'>
+                        <Link href='/Crew' onClick={() => setNavItem('crew')}><div className='navText navCrew' >
                             <b>02</b> CREW
-                        </div>
-                        <div className='crewFocusbar'></div>
+                        </div></Link>
+                        <div className={`${navItem === 'crew' ? 'crewFocusbarSelected' : 'crewFocusbar'}`}></div>
                     </div>
                     
                     <div className='flex flex-col'>
-                        <div className='navText navTechnology'>
+                        <Link href='/Technology'><div className='navText navTechnology' onClick={() => setNavItem('technology')}>
                             <b>03</b> TECHNOLOGY
-                        </div>
-                        <div className='techFocusbar'></div>
+                        </div></Link>
+                        <div className={`${navItem === 'technology' ? 'techFocusbarSelected' : 'techFocusbar'}`}></div>
                     </div>
                     
                 </div>
