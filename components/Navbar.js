@@ -41,16 +41,16 @@ export default function Navbar({ navItem, setNavItem }) {
                     </div>
                     
                     <div className='flex flex-col'>
-                        <Link href='/Crew' onClick={() => setNavItem('crew')}><div className='navText navCrew' >
+                        <Link href='/Crew' onClick={() => setNavItem('crew')}><a className='navText navCrew' >
                             <b>02</b> CREW
-                        </div></Link>
+                        </a></Link>
                         <div className={`${navItem === 'crew' ? 'crewFocusbarSelected' : 'crewFocusbar'}`}></div>
                     </div>
                     
                     <div className='flex flex-col'>
-                        <Link href='/Technology'><div className='navText navTechnology' onClick={() => setNavItem('technology')}>
+                        <Link href='/Technology' onClick={() => setNavItem('technology')}><a className='navText navTechnology' >
                             <b>03</b> TECHNOLOGY
-                        </div></Link>
+                        </a></Link>
                         <div className={`${navItem === 'technology' ? 'techFocusbarSelected' : 'techFocusbar'}`}></div>
                     </div>
                     

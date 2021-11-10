@@ -81,7 +81,7 @@
   ],
   "technology": [
     {
-      "name": "Launch vehicle",
+      "name": "LAUNCH VEHICLE",
       "images": {
         "portrait": "./assets/technology/image-launch-vehicle-portrait.jpg",
         "landscape": "./assets/technology/image-launch-vehicle-landscape.jpg"
