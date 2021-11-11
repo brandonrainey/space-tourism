@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from '../components/Navbar'
 import data from '../data.json'
 
 export default function Technology() {
+    const [techId, setTechId] = useState(0)
+    const [isSelected, setIsSelected] = useState(false)
+
     return (
         <div className='technologyBackground flex flex-col'>
             <Navbar />
@@ -11,19 +14,19 @@ export default function Technology() {
 
             <div className='flex'>
                 <div className='techInfoContainer flex'>
-                    <div className='selectionDots flex flex-col'> 
-                        <div className='selectionActive flex justify-center'><span className='selectionNumActive self-center'>1</span></div>
-                        <div className='selectionInactive flex justify-center'><span className='selectionNumInactive self-center'>2</span></div>
-                        <div className='selectionInactive flex justify-center'><span className='selectionNumInactive self-center'>3</span></div>
+                    <div className='selectionDots flex flex-col justify-between'> 
+                        <button className={`${techId === 0 ? 'selectionActive' : 'selectionInactive'} flex justify-center`} onClick={() => setTechId(0)}><span className={`${techId === 0 ? 'selectionNumActive' : 'selectionNumInactive'} self-center`}>1</span></button>
+                        <button className={`${techId === 1 ? 'selectionActive' : 'selectionInactive'} flex justify-center`} onClick={() => setTechId(1)}><span className={`${techId === 1 ? 'selectionNumActive' : 'selectionNumInactive'} self-center`}>2</span></button>
+                        <button className={`${techId === 2 ? 'selectionActive' : 'selectionInactive'} flex justify-center`} onClick={() => setTechId(2)}><span className={`${techId === 2 ? 'selectionNumActive' : 'selectionNumInactive'} self-center`}>3</span></button>
                     </div>
                     <div className='techInfoBody flex flex-col'>
                         <div className='techHeader'>THE TERMINOLOGY...</div>
-                        <div className='techInfoTitle'>{data.technology[0].name}</div>
-                        <div className='techInfoDescription'>{data.technology[0].description}</div>
+                        <div className='techInfoTitle'>{data.technology[techId].name}</div>
+                        <div className='techInfoDescription'>{data.technology[techId].description}</div>
                     </div>
                 </div>
 
-                <img src={data.technology[0].images.portrait}/>
+                <img src={data.technology[techId].images.portrait}/>
             </div>
             
 

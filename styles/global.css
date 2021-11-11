@@ -670,6 +670,7 @@ body {
     border: 1px solid rgb(255, 255, 255, 0.25);
     box-sizing: border-box;
     
+    
 }
 
 .selectionNumActive {
@@ -719,6 +720,7 @@ body {
     line-height: 64px;
 
     color: #FFFFFF;
+    margin-top: 1rem;
 }
 
 .techInfoDescription {
@@ -728,7 +730,22 @@ body {
     font-size: 18px;
     line-height: 32px;
     /* or 178% */
-
-
     color: #D0D6F9;
+    margin-top: 1.5rem;
 }
+
+.techInfoBody {
+    width: 475px;
+    margin-left: 4.5rem;
+}
+
+.techInfoContainer {
+    width: 100%;
+    margin-left: 20rem;
+    margin-top: 10rem;
+}
+
+.selectionDots {
+    height: 315px;
+}
+

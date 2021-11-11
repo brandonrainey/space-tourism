@@ -4,15 +4,14 @@ import Navbar from "../components/Navbar"
 
 
 export default function Home() {
-  const destinations = []
+  
 
-  const [navItem, setNavItem] = useState('')
+  
 
   return (
     <div className='homeBackground flex'>
       <Navbar 
-        navItem={navItem}
-        setNavItem={setNavItem}
+        
       />
       <div className='homeTextContainer flex flex-col'>
         <p className='homeText1'>
