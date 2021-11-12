@@ -27,9 +27,12 @@ export default function Home() {
           truly out of htis world experience!
         </p>
       </div>
-      <div className='exploreCircle'>
-        <p className='exploreText'>EXPLORE</p>
-      </div>
+      
+        <div className='exploreCircle'>
+          <div className='exploreCircleHover'></div> 
+          <p className='exploreText'>EXPLORE</p>
+        </div>
+       
     </div>
   )
 }

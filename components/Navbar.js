@@ -9,8 +9,19 @@ export default function Navbar() {
     const [navItem, setNavItem] = useState()
 
     useEffect(() => {
-        console.log(navItem)
-        console.log(router.pathname)
+        if (router.pathname === '/') {
+            setNavItem(0)
+        }
+        if (router.pathname === '/Destination') {
+            setNavItem(1)
+        }
+        if (router.pathname === '/Crew') {
+            setNavItem(2)
+        }
+        if (router.pathname === '/Technology') {
+            setNavItem(3)
+        }
+        
         
     }, [navItem])
     
@@ -25,7 +36,7 @@ export default function Navbar() {
                 <div className='navItemsContainer flex justify-around'>
                     <div className='flex flex-col'>
                          <Link href='/'><a onClick={() => setNavItem(0)} className='navText navHome' >
-                            <b>00</b> HOME
+                            <b className='navNumber'>00</b> HOME
                          </a></Link>
                          <div className={`${navItem === 0 ? 'homeFocusbarSelected' : 'homeFocusbar'}`}></div>
                     </div>
@@ -33,21 +44,21 @@ export default function Navbar() {
 
                     <div className='flex flex-col'>
                          <Link href='Destination'><a onClick={() => setNavItem(1)} className='navText navDestination' >
-                            <b>01</b> DESTINATION
+                            <b className='navNumber'>01</b> DESTINATION
                         </a></Link>
                         <div className={`${navItem === 1 ? 'destinationFocusbarSelected' : 'destinationFocusbar'}`}></div>
                     </div>
                     
                     <div className='flex flex-col'>
                         <Link href='/Crew' onClick={() => setNavItem(2)}><a className='navText navCrew' >
-                            <b>02</b> CREW
+                            <b className='navNumber'>02</b> CREW
                         </a></Link>
                         <div className={`${navItem === 2 ? 'crewFocusbarSelected' : 'crewFocusbar'}`}></div>
                     </div>
                     
                     <div className='flex flex-col'>
                         <Link href='/Technology' onClick={() => setNavItem(3)}><a className='navText navTechnology' >
-                            <b>03</b> TECHNOLOGY
+                            <b className='navNumber'>03</b> TECHNOLOGY
                         </a></Link>
                         <div className={`${navItem === 3 ? 'techFocusbarSelected' : 'techFocusbar'}`}></div>
                     </div>

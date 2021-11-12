@@ -116,7 +116,7 @@ body {
 .techFocusbar {
     opacity: 0;
     height: 3px;
-    width: 150px;
+    width: 7.5rem;
     position: relative;
     background: white;
     z-index: 10;
@@ -129,7 +129,7 @@ body {
 .techFocusbarSelected {
     opacity: 1;
     height: 3px;
-    width: 150px;
+    width: 7.5rem;
     position: relative;
     background: white;
     z-index: 10;
@@ -142,7 +142,7 @@ body {
 .destinationFocusbarSelected {
     opacity: 1;
     height: 3px;
-    width: 140px;
+    width: 7.7rem;
     position: relative;
     background: white;
     z-index: 10;
@@ -155,7 +155,7 @@ body {
 .crewFocusbarSelected {
     opacity: 1;
     height: 3px;
-    width: 80px;
+    width: 4.5rem;
     position: relative;
     background: white;
     z-index: 10;
@@ -168,7 +168,7 @@ body {
 .homeFocusbarSelected {
     opacity: 1;
      height: 3px;
-    width: 80px;
+    width: 4.5rem;
     position: relative;
     background: white;
     z-index: 10;
@@ -177,7 +177,7 @@ body {
 .destinationFocusbar {
     opacity: 0;
     height: 3px;
-    width: 140px;
+    width: 7.7rem;
     position: relative;
     background: white;
     z-index: 10;
@@ -186,7 +186,7 @@ body {
 .crewFocusbar {
     opacity: 0;
     height: 3px;
-    width: 80px;
+    width: 4.5rem;
     position: relative;
     background: white;
     z-index: 10;
@@ -195,7 +195,7 @@ body {
 .homeFocusbar {
     opacity: 0;
      height: 3px;
-    width: 80px;
+    width: 4.5rem;
     position: relative;
     background: white;
     z-index: 10;
@@ -250,6 +250,24 @@ body {
     border-radius: 50%;
     bottom: 220px;
     right: 220px;
+    z-index: 10;
+}
+
+.exploreCircle:hover  .exploreCircleHover{
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.exploreCircleHover {
+    position: absolute;
+    height: 375px;
+    width: 375px;
+    background: rgb(255, 255, 255, 0.25);
+    border-radius: 50%;
+    bottom: -50px;
+    right: -50px;
+    opacity: 0;
+    z-index: 1;
 }
 
 .exploreText {
@@ -269,6 +287,7 @@ body {
     letter-spacing: 2px;
 
     color: #0B0D17;
+    z-index: 11;
 }
 
 .planetImg {
@@ -594,6 +613,10 @@ body {
     opacity: 0.17;
 }
 
+.dotInactive:hover {
+    opacity: 0.5;
+}
+
 .dotNav {
     position: absolute;
     width: 132px;
@@ -673,6 +696,10 @@ body {
     
 }
 
+.selectionInactive:hover {
+    border: 1px solid rgb(255, 255, 255);
+}
+
 .selectionNumActive {
     font-family: 'Bellefair';
     font-style: normal;
@@ -747,5 +774,23 @@ body {
 
 .selectionDots {
     height: 315px;
+}
+
+@media (max-width: 768px) {
+    .homeBackground {
+        background: url('../public/assets/home/background-home-tablet.jpg') no-repeat center center fixed;
+    }
+
+    .navLine {
+        display: none;
+    }
+
+    .navNumber {
+        display: none;
+    }
+
+    .homeTextContainer {
+        margin-top: -10rem;
+    }
 }
 
