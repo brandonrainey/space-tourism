@@ -202,11 +202,15 @@ body {
 }
 
 .homeTextContainer {
-    position: absolute;
+    margin-left: 125px;
     height: 382px;
-    width: 450px;
-    left: 165px;
-    top: 387px;
+    
+    
+    flex-basis: 70%;
+}
+
+.homeWrapper {
+    margin-top: 250px;
 }
 
 .homeText1 {
@@ -240,17 +244,24 @@ body {
     /* or 178% */
     color: #D0D6F9;
     margin-top: auto;
+    
+    max-width: 40%;
+}
+
+.circleWrapper {
+    margin-top: 150px;
+    flex-basis: 30%;
 }
 
 .exploreCircle {
-    position: absolute;
+     align-self: center;
     height: 274px;
     width: 274px;
     background: #FFFFFF;
     border-radius: 50%;
-    bottom: 220px;
-    right: 220px;
-    z-index: 10;
+    position: relative;
+    
+    
 }
 
 .exploreCircle:hover  .exploreCircleHover{
@@ -291,8 +302,10 @@ body {
 }
 
 .planetImg {
-    margin-top: 8rem;
-    margin-left: 28rem;
+    display: flex;
+    justify-content: center;
+    flex-basis: 60%;
+    max-height: 472px;
 }
 
 .destinationTitle {
@@ -340,10 +353,18 @@ body {
 }
 
 .destinationContainer {
-    width: 445px;
+   
+    
     height: 472px;
-    margin-left: 18rem;
-    margin-top: 6rem;
+    flex-basis: 20%;
+}
+
+.destinationWrapper {
+    margin-top: 100px;
+}
+
+.destinationNav {
+    width: 65%;
 }
 
 .moonFocusbar {
@@ -561,6 +582,7 @@ body {
 
     mix-blend-mode: normal;
     opacity: 0.5;
+    margin-left: 300px;
 }
 
 .crewName {
@@ -574,10 +596,11 @@ body {
 
     color: #FFFFFF;
     margin-top: 1rem;
+    margin-left: 300px;
 }
 
 .crewBio {
-    font-family: Barlow;
+    font-family: 'Barlow';
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -588,13 +611,25 @@ body {
     color: #D0D6F9;
 
     margin-top: 2rem;
+    width: 50%;
+    margin-left: 300px;
 }
 
 .crewContainer {
-    width: 444px;
-    max-height: 580px;
-    margin-left: 19.9rem;
-    margin-top: 10rem;
+    margin-top: 200px;
+    max-height: 400px;
+    flex-basis: 50%;
+    justify-content: center;
+    
+}
+
+
+
+.crewWrapper {
+    margin-top: auto;
+    min-height: 700px;
+    align-self: flex-end;
+    
 }
 
 .dotActive {
@@ -618,21 +653,23 @@ body {
 }
 
 .dotNav {
-    position: absolute;
+    margin-top: 50px;
     width: 132px;
-    bottom: 10rem;
-    left: 20rem;
+    margin-left: 300px;
 }
 
 .crewImageContainer {
-    margin-left: 23.5rem;
-    margin-top: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* margin-left: 150px; */
+    max-height: 800px;
+    flex-basis: 50%;
+    
 }
 
 .crewImage {
-    position:absolute;
-    top:100vh;
-    transform:translateY(-100%);
+    
 }
 
 .technologyBackground {
@@ -768,15 +805,23 @@ body {
 
 .techInfoContainer {
     width: 100%;
-    margin-left: 20rem;
+    justify-content: center;
     margin-top: 10rem;
+}
+
+.techWrapper {
+    
 }
 
 .selectionDots {
     height: 315px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
+
+    html {
+        height: 100vh;
+    }
     .homeBackground {
         background: url('../public/assets/home/background-home-tablet.jpg') no-repeat center center fixed;
     }
@@ -790,7 +835,190 @@ body {
     }
 
     .homeTextContainer {
-        margin-top: -10rem;
+        margin-top: -11rem;
     }
+
+    .homeText1 {
+        font-family: 'Barlow Condensed';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 24px;
+        /* identical to box height */
+
+        text-align: center;
+        letter-spacing: 3.375px;
+
+        color: #D0D6F9;
+    }
+
+    .homeText2 {
+        margin-top: 10px;
+    }
+
+    .homeText3 {
+        font-family: 'Barlow';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 28px;
+        /* or 175% */
+
+        text-align: center;
+
+        color: #D0D6F9;
+
+        margin-top: 0;
+    }
+
+    .navContainer {
+        margin-top: 0;
+    }
+
+    .exploreCircle {
+        height: 242px;
+        width: 242px;
+        bottom: 80px;
+        right: 256px;
+    }
+
+    .homeFocusbarSelected {
+        width: 2.5rem;
+    }
+
+    .navHome {
+        width: 72px;
+    }
+
+    .destinationBackground {
+        
+        background: url('../public/assets/destination/background-destination-tablet.jpg') no-repeat center center fixed;
+    }
+
+    .destinationWrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .destinationContainer {
+        margin-left: 0;
+        margin-top: 40px;
+        
+    }
+
+    .destinationTitle {
+        margin-left: 40px;
+        margin-top: 40px;
+        width: 272px;
+        height: 24px;
+        font-size: 20px;
+        line-height: 24px;
+        /* identical to box height */
+
+        letter-spacing: 3.375px;
+        text-transform: uppercase;
+
+        color: #FFFFFF;
+    }
+
+    .destinationTitleNum {
+        font-size: 20px;
+        line-height: 24px;
+        /* identical to box height */
+
+        letter-spacing: 3.375px;
+
+        color: #FFFFFF;
+    }
+
+    .planetImg {
+        margin-left: 0;
+        margin-top: 50px;
+        height: 300px;
+        width: 300px;
+    }
+
+    .planetDescription {
+        width: 580px;
+        font-family: 'Barlow';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 28px;
+        /* or 175% */
+
+        text-align: center;
+
+        color: #D0D6F9;
+
+        margin-left: -70px;
+    }
+    
+    .destinationNav {
+        width: 300px;
+        margin-left: 75px;
+    }
+
+    .planetName {
+        text-align: center;
+    }
+
+    .footerInfo {
+        justify-content: center;
+    }
+
+    .footerInfo * {
+        text-align: center;
+    }
+
+    .navDestination {
+        width: 123px;
+    }
+
+    .destinationFocusbarSelected {
+        width: 6rem;
+    }
+
+    .crewBackground {
+        background: url('../public/assets/crew/background-crew-tablet.jpg') no-repeat center center fixed;
+        
+    }
+
+    .crewContainer {
+        margin:0;
+        margin-top: 0;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .crewImageContainer {
+        margin:0;
+        margin-top: 0;
+        margin-right: 0;
+        margin-left: 0;
+        height: 572px;
+        width: 456px;
+    }
+
+    .crewTitle {
+        margin:0;
+        margin-top: 0;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .dotNav {
+        
+    }
+
+    .crewImage {
+        position: relative;
+    }
+
+    .crewWrapper {
+        flex-direction: column;
+        
+    }
+
 }
 

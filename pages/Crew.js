@@ -12,13 +12,23 @@ export default function Crew() {
 
             <div className='crewTitle'><span className='crewTitleNum'>02</span> MEET YOUR CREW</div>
 
-            <div className='flex'>
-                <div className='crewContainer'>
-                    <div className='crewRole'>{data.crew[crewId].role}</div>
-                    <div className='crewName'>{data.crew[crewId].name}</div>
-                    <div className='crewBio'>{data.crew[crewId].bio}</div>
-
+            <div className='flex crewWrapper'>
+                
+                <div className='crewContainer flex flex-col'>
                     
+                        <div className='crewRole'>{data.crew[crewId].role}</div>
+                        <div className='crewName'>{data.crew[crewId].name}</div>
+                        <div className='crewBio'>{data.crew[crewId].bio}</div>
+
+                        <div className='dotNav flex justify-between'>
+                            <button className={`${crewId === 0 ? 'dotActive' : 'dotInactive'}`} onClick={() => setCrewId(0)}></button>
+                            <button className={`${crewId === 1 ? 'dotActive' : 'dotInactive'}`} onClick={() => setCrewId(1)}></button>
+                            <button className={`${crewId === 2 ? 'dotActive' : 'dotInactive'}`} onClick={() => setCrewId(2)}></button>
+                            <button className={`${crewId === 3 ? 'dotActive' : 'dotInactive'}`} onClick={() => setCrewId(3)}></button>
+                        </div>
+                    
+                        
+
                 </div>
 
                 
@@ -28,12 +38,7 @@ export default function Crew() {
                 </div>
             </div>
 
-                    <div className='dotNav flex justify-between'>
-                        <button className={`${crewId === 0 ? 'dotActive' : 'dotInactive'}`} onClick={() => setCrewId(0)}></button>
-                        <button className={`${crewId === 1 ? 'dotActive' : 'dotInactive'}`} onClick={() => setCrewId(1)}></button>
-                        <button className={`${crewId === 2 ? 'dotActive' : 'dotInactive'}`} onClick={() => setCrewId(2)}></button>
-                        <button className={`${crewId === 3 ? 'dotActive' : 'dotInactive'}`} onClick={() => setCrewId(3)}></button>
-                    </div>
+                    
                 
         </div>
     )

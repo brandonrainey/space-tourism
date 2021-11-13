@@ -34,7 +34,7 @@ export default function Navbar() {
             
             <div className='navBackground flex justify-center'>
                 <div className='navItemsContainer flex justify-around'>
-                    <div className='flex flex-col'>
+                    <div className='flex flex-col navHomeContainer'>
                          <Link href='/'><a onClick={() => setNavItem(0)} className='navText navHome' >
                             <b className='navNumber'>00</b> HOME
                          </a></Link>

@@ -4,7 +4,7 @@ import data from '../data.json'
 
 export default function Technology() {
     const [techId, setTechId] = useState(0)
-    const [isSelected, setIsSelected] = useState(false)
+    
 
     return (
         <div className='technologyBackground flex flex-col'>
@@ -12,7 +12,7 @@ export default function Technology() {
 
             <div className='technologyTitle'><span className='crewTitleNum'>03</span> SPACE LAUNCH 101</div>
 
-            <div className='flex'>
+            <div className='flex techWrapper'>
                 <div className='techInfoContainer flex'>
                     <div className='selectionDots flex flex-col justify-between'> 
                         <button className={`${techId === 0 ? 'selectionActive' : 'selectionInactive'} flex justify-center`} onClick={() => setTechId(0)}><span className={`${techId === 0 ? 'selectionNumActive' : 'selectionNumInactive'} self-center`}>1</span></button>

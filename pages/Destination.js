@@ -14,7 +14,7 @@ export default function Destination() {
 
             <div className='destinationTitle'><span className='destinationTitleNum'>01</span> PICK YOUR DESTINATION</div>
 
-            <div className='flex'>
+            <div className='flex destinationWrapper'>
                 
                 <div className='planetImg'>
                     <img src={data.destinations[planet].images.png}/>
