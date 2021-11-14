@@ -817,13 +817,20 @@ body {
     height: 315px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 768px) {
 
     html {
-        height: 100vh;
+        
     }
     .homeBackground {
         background: url('../public/assets/home/background-home-tablet.jpg') no-repeat center center fixed;
+    }
+
+    .homeWrapper {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 175px;
     }
 
     .navLine {
@@ -835,7 +842,11 @@ body {
     }
 
     .homeTextContainer {
-        margin-top: -11rem;
+        margin-top: -100px;
+        margin-left: 0;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
     }
 
     .homeText1 {
@@ -873,13 +884,17 @@ body {
 
     .navContainer {
         margin-top: 0;
+        
+    }
+
+    .circleWrapper {
+        margin-top: 100px;
     }
 
     .exploreCircle {
         height: 242px;
         width: 242px;
-        bottom: 80px;
-        right: 256px;
+        
     }
 
     .homeFocusbarSelected {
@@ -898,12 +913,17 @@ body {
     .destinationWrapper {
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+        margin-top: 0;
     }
 
     .destinationContainer {
+        display: flex;
+        flex-direction: column;
         margin-left: 0;
         margin-top: 40px;
-        
+        justify-content: center;
+        align-items: center;
     }
 
     .destinationTitle {
@@ -919,6 +939,10 @@ body {
         text-transform: uppercase;
 
         color: #FFFFFF;
+    }
+    
+    .destinationNav {
+        margin-left: 0 !important;
     }
 
     .destinationTitleNum {
@@ -951,7 +975,7 @@ body {
 
         color: #D0D6F9;
 
-        margin-left: -70px;
+        
     }
     
     .destinationNav {
@@ -984,6 +1008,10 @@ body {
         
     }
 
+    .crewFocusbarSelected {
+        
+    }
+
     .crewContainer {
         margin:0;
         margin-top: 0;
@@ -1007,16 +1035,72 @@ body {
         margin-left: 0;
     }
 
-    .dotNav {
+    .crewRole {
+        font-family: 'Bellefair';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 28px;
+        /* identical to box height */
+
+        text-align: center;
+        text-transform: uppercase;
+
+        color: #FFFFFF;
+
+        mix-blend-mode: normal;
+        opacity: 0.5;
+        margin-left: 0;
+    }
+
+    .crewName {
+        font-family: 'Bellefair';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 40px;
+        line-height: 46px;
+        /* identical to box height */
+
+        text-align: center;
+        text-transform: uppercase;
+
+        color: #FFFFFF;
+        margin-left: 0;
+    }
+
+    .crewBio {
+        font-family: 'Barlow';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 28px;
+        /* or 175% */
+
+        text-align: center;
+
+        color: #D0D6F9;
+        margin-left: 0;
+    }
+
+    .crewImageContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         
     }
 
     .crewImage {
-        position: relative;
+        
+        max-height: 572px;
     }
 
     .crewWrapper {
         flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .dotNav {
         
     }
 
