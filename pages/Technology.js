@@ -26,7 +26,8 @@ export default function Technology() {
                     </div>
                 </div>
 
-                <img src={data.technology[techId].images.portrait}/>
+                <img src={data.technology[techId].images.portrait} className='techImage'/>
+                <img src={data.technology[techId].images.landscape} className='techImage2'/>
             </div>
             
 

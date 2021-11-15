@@ -809,8 +809,8 @@ body {
     margin-top: 10rem;
 }
 
-.techWrapper {
-    
+.techImage2 {
+    display: none;
 }
 
 .selectionDots {
@@ -1014,9 +1014,8 @@ body {
 
     .crewContainer {
         margin:0;
-        margin-top: 0;
-        margin-right: 0;
-        margin-left: 0;
+        justify-content: center;
+        align-items: center;
     }
 
     .crewImageContainer {
@@ -1069,6 +1068,7 @@ body {
     }
 
     .crewBio {
+        display: flex;
         font-family: 'Barlow';
         font-style: normal;
         font-weight: normal;
@@ -1080,17 +1080,21 @@ body {
 
         color: #D0D6F9;
         margin-left: 0;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
     }
 
     .crewImageContainer {
         display: flex;
         justify-content: center;
         align-items: center;
-        
+        max-height: 572px;
+        min-height: 572px;
     }
 
     .crewImage {
-        
+        margin-top: auto;
         max-height: 572px;
     }
 
@@ -1101,8 +1105,152 @@ body {
     }
 
     .dotNav {
+        margin-left: 0;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .technologyBackground {
+        background: url('../public/assets/technology/background-technology-tablet.jpg') no-repeat center center fixed;
+    }
+
+    .techWrapper {
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .technologyTitle {
+        margin-top: 50px;
+        margin-bottom: 60px;
+        margin-left: 20px;
+        font-family: 'Barlow Condensed';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 24px;
+        /* identical to box height */
+
+        letter-spacing: 3.375px;
+        text-transform: uppercase;
+
+        color: #FFFFFF;
+    }
+
+    .crewTitleNum {
+        font-family: 'Barlow Condensed';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 24px;
+        /* identical to box height */
+
+        letter-spacing: 3.375px;
+
+        color: #FFFFFF;
+
+        mix-blend-mode: normal;
+        opacity: 0.25;
+    }
+
+    .techInfoContainer {
+        margin-top: 0;
+        flex-direction: column;
+        order: 2;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .techInfoBody {
+        margin-left: 0;
+    }
+
+    .selectionDots {
+        flex-direction: row;
+        height: 100px;
+        justify-content: center;
+        column-gap: 15px;
+        margin-top: 40px;
+    }
+
+    .techImage2 {
+        display: block;
+        order: 1;
+    }
+
+    .techImage {
+        display: none;
+    }
+
+    .techHeader {
+        font-family: 'Barlow Condensed';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 2.7px;
+
+        color: #D0D6F9;
+        text-align: center;
+    }
+
+    .techInfoTitle {
+        font-family: 'Bellefair';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 40px;
+        line-height: 46px;
+        /* identical to box height */
+
+        text-align: center;
+        text-transform: uppercase;
+
+        color: #FFFFFF;
+    }
+
+    .techInfoDescription {
+        font-family: 'Barlow';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 28px;
+        /* or 175% */
+
+        text-align: center;
+
+        color: #D0D6F9;
+    }
+
+    .selectionActive {
+        height: 58px;
+        width: 58px;
+    }
+
+    .selectionInactive {
+        height: 58px;
+        width: 58px;
+    }
+
+    .selectionNumActive {
+        font-size: 24px;
+        line-height: 28px;
+        /* identical to box height */
+
+        text-align: center;
+        letter-spacing: 1.5px;
+
+    }
+
+    .selectionNumInactive {
+        font-size: 24px;
+        line-height: 28px;
+        /* identical to box height */
+
+        text-align: center;
+        letter-spacing: 1.5px;
         
     }
+
+
 
 }
 
